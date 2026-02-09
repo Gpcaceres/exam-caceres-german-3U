@@ -74,6 +74,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Docker
+.dockerignore
+
 # Package manager lock files (optional)
 # package-lock.json
 # yarn.lock
