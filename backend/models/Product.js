@@ -25,6 +25,6 @@ const productSchema = new mongoose.Schema({
     type: Number,
     default: 0
   }
-}, { timestamps: true, collection: 'companydb' });
+}, { timestamps: true, collection: 'productos' });
 
 module.exports = mongoose.model('Product', productSchema);
