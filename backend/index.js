@@ -6,7 +6,7 @@ const Product = require('./models/Product');
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ origin: ['http://localhost:3000', 'http://34.58.138.83:3000'] }));
 
 // MongoDB connection
 mongoose.connect(process.env.MONGODB_URI, {
