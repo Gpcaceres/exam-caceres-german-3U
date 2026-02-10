@@ -17,7 +17,8 @@ function App() {
     setLoading(true);
     setHasSearched(true);
     try {
-      const response = await fetch('http://localhost:5000/api/products');
+      const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+      const response = await fetch(`${API_URL}/api/products`);
       const data = await response.json();
       setProducts(data);
     } catch (err) {
@@ -35,7 +36,8 @@ function App() {
     }
     setLoading(true);
     try {
-      const response = await fetch(`http://localhost:5000/api/products/search?query=${searchTerm}`);
+      const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+      const response = await fetch(`${API_URL}/api/products/search?query=${searchTerm}`);
       const data = await response.json();
       setProducts(data);
     } catch (err) {
@@ -53,7 +55,8 @@ function App() {
       return;
     }
     try {
-      const response = await fetch('http://localhost:5000/api/days-to-expire', {
+      const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+      const response = await fetch(`${API_URL}/api/days-to-expire`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ day, month, year })
