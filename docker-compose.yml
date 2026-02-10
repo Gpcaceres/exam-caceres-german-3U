@@ -42,9 +42,6 @@ services:
       - ./backend/frontend:/app
       - /app/node_modules
 
-volumes:
-  # mongodb_data not needed - using MongoDB Atlas
-
 networks:
   exam-network:
     driver: bridge
