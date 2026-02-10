@@ -1,8 +1,8 @@
 // Script para ejecutar directamente en MongoDB Compass o Mongo Shell
-// Ejecutar en la base de datos: company
+// Ejecutar en la base de datos: companydb
 
-// 1. Cambiar a la base de datos company
-use('company');
+// 1. Cambiar a la base de datos companydb
+use('companydb');
 
 // 2. Eliminar productos anteriores (opcional)
 db.productos.deleteMany({});

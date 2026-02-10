@@ -1,0 +1,54 @@
+### Variables
+@baseUrl = http://34.58.138.83:5000
+@productionUrl = http://34.58.138.83:5000
+
+### 1. Calculate days to expire
+POST {{baseUrl}}/api/days-to-expire
+Content-Type: application/json
+
+{
+  "day": 20,
+  "month": 2,
+  "year": 2026
+}
+
+### 2. Get all products
+GET {{baseUrl}}/api/products
+
+### 3. Search products by name
+GET {{baseUrl}}/api/products/search?query=milk
+
+### 4. Search products by name - Whole Milk
+GET {{baseUrl}}/api/products/search?query=Whole Milk
+
+### 5. Search products by name - Cheese
+GET {{baseUrl}}/api/products/search?query=cheese
+
+### 6. Get product by ID (replace with actual ID from previous requests)
+GET {{baseUrl}}/api/products/65c1234567890abcdef12345
+
+### 7. Get all products (empty search)
+GET {{baseUrl}}/api/products/search?query=
+
+###############################################
+# Production endpoints
+###############################################
+
+### 8. Calculate days to expire (Production)
+POST {{productionUrl}}/api/days-to-expire
+Content-Type: application/json
+
+{
+  "day": 15,
+  "month": 3,
+  "year": 2026
+}
+
+### 9. Get all products (Production)
+GET {{productionUrl}}/api/products
+
+### 10. Search products (Production)
+GET {{productionUrl}}/api/products/search?query=Fresh
+
+### 11. Search Dairy products (Production)
+GET {{productionUrl}}/api/products/search?query=Dairy
