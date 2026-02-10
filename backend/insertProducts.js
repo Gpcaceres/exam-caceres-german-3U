@@ -1,14 +1,14 @@
 // Script para ejecutar directamente en MongoDB Compass o Mongo Shell
-// Ejecutar en la base de datos: productsDB
+// Ejecutar en la base de datos: travel_brain
 
-// 1. Cambiar a la base de datos productsDB
-use('productsDB');
+// 1. Cambiar a la base de datos travel_brain
+use('travel_brain');
 
 // 2. Eliminar productos anteriores (opcional)
-db.products.deleteMany({});
+db.companydb.deleteMany({});
 
 // 3. Insertar productos
-db.products.insertMany([
+db.companydb.insertMany([
   {
     name: 'Leche Entera',
     description: 'Leche entera pasteurizada 1L',
